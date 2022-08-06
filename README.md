@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# React Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplikacja webowa utworzona w React na potrzeby szkolenia wewnętrznego SOFTIQ.
 
-## Available Scripts
+### Cel szkolenia
 
-In the project directory, you can run:
+Rozwój aplikacji spełniającej funkcję portfolio programisty, przykład: https://react-developer-portfolio-zeta.vercel.app/.
 
-### `npm start`
+### Stos technologiczny (w finalnej aplikacji)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [React](https://pl.reactjs.org/)
+- [React Router](https://reactrouter.com/en/main)
+- [Bootstrap](https://getbootstrap.com/)
+- JavaScript ES6
+- HTML5
+- CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Przygotowanie środowiska deweloperskiego
 
-### `npm test`
+1. Instalacja narzędzia [npm](https://www.npmjs.com/), najprościej poprzez [node.js](https://nodejs.org/en/download/).
+2. (Dla Windowsa) Dodanie *npm* do zmiennej środowiskowej `PATH` (domyślnie jest w katalogu `C:\Users\SQ12345\AppData\Roaming\npm`).
+3. W folderze projektu wykonanie komendy `npm install`, która pobierze pliki wykorzystywanych bibliotek (w tym Reacta) do katalogu `node_modules`.
+4. W folderze projektu wykonanie komendy `npm start`, która uruchomi lokalny serwer deweloperski obsługujący hot-reloading.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Przebieg szkolenia
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Krótkie wprowadzenie teoretyczne
+2. Omówienie działania docelowej aplikacji
+3. Uruchomienie bazowego projektu
+4. Omówienie bazowego projektu
+5. Nauka poszczególnych aspektów Reacta podczas implementacji dodatkowych funkcjonalności do bazowego projektu w ramach wymienionych zadań. Rozwiązanie każdego z zadań będzie się znajdować na osobnej gałęzi o nazwie np `task5`.
+   1. Trzeba utworzyć nowy komponent o nazwie np `ProjectsList`, wyświetlający nagłówek *Projekty* i renderować go w `App.jsx` pod formularzem.
+   2. Imię, nazwisko i stanowisko osoby trzeba przekazać do komponentu `Header` przez `props`.
+   3. W komponencie `Header` trzeba dodać ikonę poczty e-mail. Najechanie kursorem na ikonę powinno zmienić jego styl. Definicja stylu kursora powinna znajdować się w pliku `css`/`scss`. Obsługa naciśnięcia ikony będzie w ramach następnego zadania.
+   4. Trzeba dodać stan w `App.jsx` przechowujący informację o tym, czy formularz jest widoczny. Naciśnięcie ikony poczty powinno pokazywać / ukrywać formularz.
+   5. Trzeba dodać pola formularza, których wartości będą przechowywane w stanie komponentu. Wpisanie wartości do pól formularza powinno zaktualizować stan komponentu.
+   6. Naciśnięcie etykiety pola powinno ustawić focus na powiązane pole. Trzeba użyć hooka `useId`.
+   7. W momencie naciśnięcia przycisku *Wyślij* trzeba wysłać zapytanie API. Na czas wysyłania zapytania przycisk powinien być wyłączony oraz powinna być widoczna animacja. Po otrzymaniu odpowiedzi trzeba wyświetlić wiadomość, jaka przyszła przez API, oraz wyczyścić pola formularza.
+   8. Trzeba wykonać zapytanie uzyskujące listę projektów. Na czas wykonywania zapytania trzeba wyświetlić animację ładowania. Wyświetlenie projektów będzie w ramach następnego zadania, na ten moment wystarczy zapisać je w stanie.
+   9. Trzeba wyświetlać załadowane wcześniej dane o projektach.
+   10. Trzeba dodać do projektu bibliotekę `react-router`. Trzeba przerobić aplikację w taki sposób, żeby były zdefiniowane dwie ścieżki. `/` (główny ekran) i `/contact`. Na obu ekranach powinien być wyświetlany nagłówek (nasz komponent `Header`). Na stronie głównej byłaby lista projektów, a nagłówek zawierałby dotychczasową ikonę kontaktu (przekierowującą na adres `/contact`). Pod adresem `/contact` byłby formularz kontaktowy, a nagłówek wyświetlałby ikonę powrotu, która przekierowywałaby pod adres `/`. Najlepiej, gdyby nazwy ścieżek aplikacji znajdowały się w osobnym pliku, np `/src/utils/routeNames.js`.
+   11. Trzeba na głównym ekranie (pod adresem `/`) wyświetlać tylko 3 pierwsze projekty oraz wyświetlać przycisk 'Pokaż więcej'. Naciśnięcie przycisku powinno przekierować na nowy ekran, pod adresem `/projects`, na którym byłby wyświetlany komponent Header oraz lista wszystkich projektów (taka, jak do tej pory na stronie głównej). W komponencie `Header` zamiast ikony kontaktu wyświetlałaby się ikona powrotu, przekierowująca na ekran główny. Po wejściu na adres `/projects` powinno być wykonywane zapytanie API pobierające projekty.
+   12. Trzeba utworzyć kontekst pobierający i przechowujący informację o projektach oraz wykorzystywać go we wszystkich miejscach, gdzie potrzebne są dane projektów. Dzięki temu, przechodząc ze strony głównej na stronę z projektami, nie będzie się pojawiać animacja ładowania.
+   13. Trzeba utworzyć własny hook o nazwie np `useAsyncAction`, który byłby wrapperem dla asynchronicznych funkcji. Jako argument przyjmowałby funkcję `action`, która przyjmuje opcjonalny parametr i nie zwraca żadnej wartości. Hook przechowywałby informację o tym, czy trwa wysyłanie zapytania, oraz o tym, czy wystąpił błąd. Zwracaną wartością z hooka byłaby lista, w której:
+         - pierwszym elementem jest asynchroniczna funkcja wywołująca funkcję `action`, ale z obsługą błędów,
+         - drugim elementem byłaby informacja o tym, czy trwa wysyłanie zapytania,
+         - trzecim elementem byłaby informacja o tym, czy wystąpił błąd.
